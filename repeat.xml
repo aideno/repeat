@@ -1,1 +1,65 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_whileUntil" id="24" inline="false" x="106" y="14">
+    <field name="MODE">WHILE</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="80">
+        <field name="OBJECT">UP</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="movement_forward" id="117"></block>
+    </statement>
+    <next>
+      <block type="controls_whileUntil" id="31" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
+          <block type="sensor_button" id="87">
+            <field name="OBJECT">DOWN</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="movement_reverse" id="127"></block>
+        </statement>
+        <next>
+          <block type="controls_whileUntil" id="44" inline="false">
+            <field name="MODE">WHILE</field>
+            <value name="NUMBER">
+              <block type="sensor_button" id="104">
+                <field name="OBJECT">LEFT</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="movement_left" id="137"></block>
+            </statement>
+            <next>
+              <block type="controls_whileUntil" id="51" inline="false">
+                <field name="MODE">WHILE</field>
+                <value name="NUMBER">
+                  <block type="sensor_button" id="105">
+                    <field name="OBJECT">RIGHT</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="movement_right" id="156"></block>
+                </statement>
+                <next>
+                  <block type="controls_whileUntil" id="65" inline="false">
+                    <field name="MODE">WHILE</field>
+                    <value name="NUMBER">
+                      <block type="sensor_button" id="106">
+                        <field name="OBJECT">ENTER</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="movement_stutter" id="179"></block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
